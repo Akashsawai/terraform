@@ -1,4 +1,8 @@
-resource "first" "b" {
-  ami           = "ami-00874d747dde814fa"
-  instance_type = "t2.micro"
+resource "aws_iam_user" "iam" {
+  name = "user1"
+  path = "/system/"
+
+  tags = {
+    tag-key = "tag-value"
+  }
 }
