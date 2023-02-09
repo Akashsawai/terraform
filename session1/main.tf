@@ -1,10 +1,9 @@
 module "ec2_instance" {
   source  = "terraform-aws-modules/ec2-instance/aws"
-  version = "~> 3.0"
 
   name = "single-instance"
 
-  ami                    = "ami-00874d747dde814fa"
+  ami                    = "ami-0aa7d40eeae50c9a9"
   instance_type          = "t2.micro"
   key_name               = "key1"
   monitoring             = true
@@ -12,6 +11,5 @@ module "ec2_instance" {
 
    tags = {
     Terraform   = "true"
-    Environment = "dev"
   }
 }
